@@ -1,0 +1,17 @@
+<div class="searchItems">
+<div class="container">
+  <% if (!search) { %>
+  <h1>Discover Happy Hour</h1>
+  <% } else {%>
+    <h1><%= search %></h1>
+  <% } %>
+  <p>Find a happy hour near you.</p>
+  <form action="/results" method="GET">
+    <input class="searchBar" type="text" placeholder="Search by city or zipcode" name="search">
+    <button class="btn btn-default" type="submit">Search</button>
+    <br>
+    <br>
+    <a target="_blank" href="https://www.yelp.com/developers"><img src="/images/logos/yelp.png"></a>
+  </form>
+</div>
+</div>
