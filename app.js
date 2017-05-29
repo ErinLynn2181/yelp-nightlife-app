@@ -39,18 +39,18 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use(function(req, res, next){
-  res.locals.currentUser = req.user;
-  res.locals.search = req.query.search;
-  res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
-  next();
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    res.locals.search = req.query.search;
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
+    next();
 });
 
 app.use(indexRoutes);
 app.use(yelpRoutes);
 app.use(rsvpRoutes);
 
-app.listen(process.env.PORT || 3333, function(){
-  console.log("Server has started");
+app.listen(process.env.PORT || 8080, function() {
+    console.log("Server has started");
 })
