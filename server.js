@@ -15,7 +15,7 @@ var rsvpRoutes = require("./routes/rsvp"),
     yelpRoutes = require("./routes/yelp"),
     indexRoutes = require("./routes/index")
 
-var url = process.env.DATABASEURL || "mongodb://localhost/nightlifeapp"
+var url = process.env.MONGO_URI || "mongodb://localhost/nightlifeapp"
 mongoose.connect(url);
 
 //CONFIGS
